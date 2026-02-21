@@ -1,115 +1,144 @@
-/* Reset some default styles */
+/* Reset & body */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body background and text */
 body {
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
 
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
 /* Header */
 header {
-    background-color: #4CAF50;
+    background-color: #1f2937;
     color: white;
     padding: 20px 0;
-    text-align: center;
 }
 
 header h1 {
+    text-align: center;
     margin-bottom: 10px;
 }
 
-/* Navigation menu */
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    list-style: none;
+    gap: 30px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffeb3b;
+    color: #10b981;
 }
 
-/* Main sections */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
+/* Hero section */
+#hero {
+    background: #10b981;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
 }
 
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Sections */
 section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 60px 20px;
 }
 
 section h2 {
-    margin-bottom: 15px;
-    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937;
 }
 
-/* Form styling */
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Forms */
 form input[type="text"],
 form input[type="email"],
 form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     resize: vertical;
 }
 
 form input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #1f2937;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #10b981;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #1f2937;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 20px 0;
     font-size: 14px;
 }
 
-/* Responsive for smaller screens */
+/* Responsive */
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    main {
-        padding: 0 10px;
+    #hero h2 {
+        font-size: 2rem;
     }
 }
